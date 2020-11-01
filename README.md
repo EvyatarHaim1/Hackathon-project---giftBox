@@ -1,9 +1,10 @@
 # Hackathon-project - GiftBox:
 
-- Node.js (express)
-- Dom Traversal
-- Handlebars
-- jQuery
+* Git Collaboration - Git Branches
+* Node.js (express)
+* Dom Traversal
+* Handlebars
+* jQuery
 
 ![alt text](https://github.com/EvyatarHaim1/Hackathon-project---giftBox/blob/main/view.png?raw=true)
 ![alt text](https://github.com/EvyatarHaim1/Hackathon-project---giftBox/blob/main/view2.png?raw=true)
