@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bonjour</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abel
+    |Montserrat|Patua+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- font-family: 'Patua One', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Abel', sans-serif; -->
+</head>
+
+<body>
+    <div class="img">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          My gifts
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          </ul>
+                        </div>   
+                    </li>                 
+                    <li class="logo" id="giftbox" onclick="location.href='./index.html';">GiftBox</li>
+                    <li><img src="EvyatarPic.jpg" id="userPic" alt=""></li> 
+                </ul>
+            </nav>
+            <div id="userInfo"></div>
+        </div>
+        <div class="dropDownContainer">
+            <div class="dropDown"></div>
+            </div>
+        <div class="category">
+            <div id="imgTitle">
+                <img src="https://images.unsplash.com/photo-1515215316771-2742baa337f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=60"
+                    alt="">
+            </div>
+            <div id="details">
+                <div class="name">Bonjour:</div>
+                <div class="details">This GiftBox for two people offers the posibility
+                    to choose and enjoy the most exquisite breakfast
+                    and teas around the city.</div>
+                <i class="fas fa-user"></i><i class="fas fa-user"></i>
+                <div class="price">Price: <span id='shekels'>99</span> ₪</div>
+                <button id="buy">Buy it</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="divider"></div>
+    <div id="options">Where can you go?</div>
+    <div id='providers-container'></div>
+
+    
+    <script id="container-template" type="text/x-handlebars-template">
+        {{#each providers}}
+        <div id='provider-container'>
+            <div id='name'>{{name}}</div>
+            <img src={{picture}} id="img">
+            <div id='address'>{{address}}</div>
+            <div id="rating">{{rating}}<i class="fas fa-star"></i></div>
+        </div>
+        {{/each}}
+    </script>
+    
+    <script id="container-dropDown" type="text/x-handlebars-template">
+        {{#each products}}
+        <ul id='drop-container'>
+            <span id='name'>{{name}}</span>
+            <span id='price'>{{price}} ₪</span>
+        </span>
+        {{/each}}
+    </script>
+
+    <script id="container-userInfo" type="text/x-handlebars-template">
+        <ul id='drop-container'>
+            <span id='nameInfo'>{{name}}</span>
+            <span id='creditInfo'>{{credit}} ₪</span>
+            <div>Load Credit
+                <input type="text" aria-placeholder="How many you want to charge?" id="charge">
+                <button id=chargeBtn>Charge</button>
+            </div>
+        </span>
+    </script>
+
+    <div id="footer"></div>
+    <!-- <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKPQ9pTdtxhIeBZxzpAhVZB-CMi52cZH4&callback=initMap">
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="TempManager.js"> </script>
+    <script src="main.js"> </script>
+</body>
+
+</html>
